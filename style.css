@@ -54,10 +54,17 @@ body {
 
 .shoutout {
   color: #FFF;
+
+	/* three-column display, so float left with 33% width */
   float: left;
-  height: 390px;
+	width: 33.333333%;
+
+	/* need to position who and when based on this parent div, so setting position */
   position: relative;
-  width: 33.333333%;
+
+	/* yuck, explicit height. We'll fix this later. */
+	height: 390px;
+
 }
 
 .shoutout p {
@@ -68,16 +75,16 @@ body {
 }
 
 .who {
+	/* positioned at the bottom, regardless of the height of the content above, so absolute makes sense here */
   bottom: 25px;
-  margin-left: 20px;
+  left: 20px;
   position: absolute;
-  text-align: left;
 }
 
 .when {
+	/* positioned at the bottom, regardless of the height of the content above, so absolute makes sense here */
   bottom: 25px;
-  margin-right: 20px;
-  right: 0;
+  right: 20px;
   text-align: right;
   position: absolute;
 }
